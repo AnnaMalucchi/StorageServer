@@ -1,0 +1,6 @@
+File di Configurazione:
+NrThread=8
+NrMaxFile=100
+DimMaxMBytes=32
+NameSocketFile=./sockname
+NameFileLog=./test3/LogFile
