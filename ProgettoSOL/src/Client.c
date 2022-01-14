@@ -352,34 +352,43 @@ int main(int argc, char* argv[]){
         if(ControlDir(lOperation, "r", "R")==0){
             if(config_stdout==1)
                 printf("ERROR: Request <d> not accepted. Try again with -r/-R\n");
-        }else{
-            //Nello stesso comando possono esserci più flag -d. Quando se ne incontra uno nuovo si sovrascrivono
-            if(dcheck==1){
-                free(config_d);
-            }
+        }
+        config_d=malloc(strlen(aux)+1*sizeof(char));
+        strcpy(config_d, aux);
+        if(config_stdout==1)
+            printf("Request <d> accepted\n");
+        free(aux);
+        while(ContainOp(&lOperation, "d", &aux)==1){
+            free(config_d);
             config_d=malloc(strlen(aux)+1*sizeof(char));
             strcpy(config_d, aux);
             if(config_stdout==1)
                 printf("Request <d> accepted\n");
+            free(aux);
+
         }
-        free(aux);
     }
     if(ContainOp(&lOperation, "D", &aux)==1){       
         //Verifico che -D sia usato congiuntamente a -w o-W
         if(ControlDir(lOperation, "w", "W")==0){
             if(config_stdout==1)
                 printf("ERROR: Request <D> not accepted. Try again with -w/-W\n");
-        }else{
-            //Nello stesso comando possono esserci più flag -D. Quando se ne incontra uno nuovo si sovrascrivono
-            if(Dcheck==1){
-                free(config_D);
-            }
+        }
+        config_D=malloc(strlen(aux)+1*sizeof(char));
+        strcpy(config_D, aux);
+        if(config_stdout==1)
+            printf("Request <D> accepted\n");
+        free(aux);
+
+        while(ContainOp(&lOperation, "D", &aux)==1){
+            free(config_D);
             config_D=malloc(strlen(aux)+1*sizeof(char));
             strcpy(config_D, aux);
             if(config_stdout==1)
                 printf("Request <D> accepted\n");
+            free(aux);
+
         }
-        free(aux);
     }
     
     node_t *corr=lOperation;

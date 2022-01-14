@@ -80,9 +80,8 @@ int maxClient=0, ConnectionClient=0, nrFileReplace=0, bytesWrite=0, nrWrite=0, b
 char nameFileLog[32];
 volatile sig_atomic_t typeClose=OPEN;
 
-node_t *coda = NULL; //CODA DI COMUNICAZIONE MANAGER --> WORKERS / RISORSA CONDIVISA / CODA FIFO 
+node_t *coda = NULL; //CODA DI COMUNICAZIONE MANAGER --> WORKERS / RISORSA CONDIVISA
 pthread_mutex_t lock_coda = PTHREAD_MUTEX_INITIALIZER;
-//pthread_cond_t signal_coda = PTHREAD_COND_INITIALIZER;
 pthread_cond_t not_empty = PTHREAD_COND_INITIALIZER;
 pthread_mutex_t mutexStorage = PTHREAD_MUTEX_INITIALIZER;
 
@@ -97,6 +96,7 @@ void HelloServer(int nrThread, int nrMaxFile, int dimMaxBytes, char* nameSocketF
     printf("\t---------------------------\n");
     INSERT_OP_MOD("-----OPEN FileStorageServer\n", nameFileLog, NULL);
 }
+
 
 void ReadConfigurationFile(const char* confFile, int *nrThread, int *nrMaxFile, int *dimMaxBytes, char *nameSocketFile, char *nameFileLog){
 
@@ -204,6 +204,7 @@ void insertlist (node_t **l, int data) {
     //Invio signal
     SYSCALL_PTHREAD(err,pthread_cond_signal(&not_empty),"Signal");
     nr_client++;
+
     //Rilascio della lock
     pthread_mutex_unlock(&lock_coda);
     //printf("Queue entry -> Client %d\n", data);
@@ -213,7 +214,7 @@ int removelist_t (node_t ** list) {
     int err;
     //Prendo lock
     SYSCALL_PTHREAD(err,pthread_mutex_lock(&lock_coda),"Lock");
-    while (coda==NULL) {
+    while (*list==NULL) {
         //printf("Empty queue\n");
         fflush(stdout);
         pthread_cond_wait(&not_empty, &lock_coda);
@@ -223,6 +224,7 @@ int removelist_t (node_t ** list) {
     data=curr->data;
     *list=curr->next;
     free(curr);
+
     //Rilascio della lock
     SYSCALL_PTHREAD(err,pthread_mutex_unlock(&lock_coda),"Lock"); 
     nr_client--;
@@ -918,6 +920,13 @@ void Wait_Signal(int signal){
 }
 
 
+
+
+
+
+
+
+
 void *worker(void* arg){
     worker_id_t work= *((worker_id_t *)arg);
     int work_id=work.id;
@@ -1114,7 +1123,6 @@ int main(int argc, char *argv[]){
                     continue;
                 }
                 if(fd==pip[0]){
-                    //Client da reinserire nel set
                     int fd_c1;
                     FD_SET(fd_c1, &set);
                     if(fd_c>num_fd) num_fd=fd_c;

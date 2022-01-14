@@ -17,95 +17,95 @@ REQUEST MADE BY WORKERS: 0
 CREATE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/zio paperone
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/zio paperone
 ->ClIENT 6
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 0
 WRITE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/zio paperone
 BYTES WRITTEN 1171
 NR BYTES STORAGE 1423
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 0
 WRITE UNLOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/zio paperone
 ->ClIENT 6
 UNLOCK_FILE
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 0
 CREATE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/pluto
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/pluto
 ->ClIENT 6
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 0
 WRITE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/pluto
 BYTES WRITTEN 9215
 NR BYTES STORAGE 10638
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 0
 WRITE UNLOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/pluto
 ->ClIENT 6
 UNLOCK_FILE
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 0
 CREATE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/clarabella
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/clarabella
 ->ClIENT 6
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 0
 WRITE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/clarabella
 BYTES WRITTEN 419
 NR BYTES STORAGE 11057
-REQUEST MADE BY WORKERS: 1
+REQUEST MADE BY WORKERS: 0
 WRITE UNLOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/clarabella
 ->ClIENT 6
 UNLOCK_FILE
-REQUEST MADE BY WORKERS: 1
+REQUEST MADE BY WORKERS: 0
 CREATE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/Qui, Quo e Qua
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/Qui, Quo e Qua
 ->ClIENT 6
-REQUEST MADE BY WORKERS: 1
+REQUEST MADE BY WORKERS: 0
 WRITE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/Qui, Quo e Qua
 BYTES WRITTEN 466
 NR BYTES STORAGE 11523
-REQUEST MADE BY WORKERS: 1
+REQUEST MADE BY WORKERS: 0
 WRITE UNLOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/Qui, Quo e Qua
 ->ClIENT 6
 UNLOCK_FILE
-REQUEST MADE BY WORKERS: 1
+REQUEST MADE BY WORKERS: 0
 CREATE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/topolino
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/topolino
 ->ClIENT 6
-REQUEST MADE BY WORKERS: 1
+REQUEST MADE BY WORKERS: 0
 WRITE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/topolino
 BYTES WRITTEN 418544
 NR BYTES STORAGE 430067
-REQUEST MADE BY WORKERS: 1
+REQUEST MADE BY WORKERS: 0
 WRITE UNLOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/topolino
 ->ClIENT 6
 UNLOCK_FILE
-REQUEST MADE BY WORKERS: 3
+REQUEST MADE BY WORKERS: 0
 CREATE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/paperina
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/paperina
 ->ClIENT 6
-REQUEST MADE BY WORKERS: 3
+REQUEST MADE BY WORKERS: 0
 WRITE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/paperina
 BYTES WRITTEN 6918
 NR BYTES STORAGE 436985
-REQUEST MADE BY WORKERS: 3
+REQUEST MADE BY WORKERS: 0
 WRITE UNLOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/paperina
 ->ClIENT 6
 UNLOCK_FILE
-REQUEST MADE BY WORKERS: 3
+REQUEST MADE BY WORKERS: 0
 CREATE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/minni
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/minni
 ->ClIENT 6
-REQUEST MADE BY WORKERS: 3
+REQUEST MADE BY WORKERS: 0
 WRITE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/minni
 BYTES WRITTEN 7650
 NR BYTES STORAGE 444635
-REQUEST MADE BY WORKERS: 3
+REQUEST MADE BY WORKERS: 0
 WRITE UNLOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client1/PersonaggiDisney/minni
 ->ClIENT 6
 UNLOCK_FILE
-REQUEST MADE BY WORKERS: 3
+REQUEST MADE BY WORKERS: 0
 CLOSE CONNECTION CLIENT 6
 OPEN CONNECTION CLIENT 6
-REQUEST MADE BY WORKERS: 0
-REQUEST MADE BY WORKERS: 0
+REQUEST MADE BY WORKERS: 3
+REQUEST MADE BY WORKERS: 3
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/paperino
 ->ClIENT 6
 LOCK_FILE
-REQUEST MADE BY WORKERS: 0
+REQUEST MADE BY WORKERS: 3
 APPEND TO FILE /home/anna/Scrivania/ProgettoSOL/paperino
 BYTES WRITTEN 252
 NR BYTES STORAGE 444888
@@ -155,11 +155,11 @@ REQUEST MADE BY WORKERS: 3
 WRITE UNLOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client2/Supereroi/Hulk
 ->ClIENT 6
 UNLOCK_FILE
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 3
 CREATE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client2/Supereroi/IronMan
 WRITE LOCK FILE /home/anna/Scrivania/ProgettoSOL/test2/Client2/Supereroi/IronMan
 ->ClIENT 6
-REQUEST MADE BY WORKERS: 2
+REQUEST MADE BY WORKERS: 3
 WRITE FILE /home/anna/Scrivania/ProgettoSOL/test2/Client2/Supereroi/IronMan
 BYTES WRITTEN 271286
 NR BYTES STORAGE 656341

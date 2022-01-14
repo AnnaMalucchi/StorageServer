@@ -32,9 +32,10 @@ typedef struct element{
 listFile_t *root;
 
 
-int MaxNrFile, MaxBytesStorage; //Utili per le statistiche
 int nrFile, BytesStorage;
 
+
+int MaxNrFile, MaxBytesStorage; //Utili per le statistiche
 #define SYSCALL_PTHREAD(e,c,s) \
     if((e=c)!=0) { errno=e;perror(s);fflush(stdout);exit(EXIT_FAILURE); }
 
