@@ -920,13 +920,6 @@ void Wait_Signal(int signal){
 }
 
 
-
-
-
-
-
-
-
 void *worker(void* arg){
     worker_id_t work= *((worker_id_t *)arg);
     int work_id=work.id;
