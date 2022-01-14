@@ -1,6 +1,0 @@
-File di Configurazione:
-NrThread=4
-NrMaxFile=10
-DimMaxMBytes=1
-NameSocketFile=./sockname
-NameFileLog=./test2/LogFile
